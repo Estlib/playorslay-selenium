@@ -4,7 +4,13 @@ using System.Text;
 
 namespace PlayOrSlay_Testing
 {
-    internal class OrderAttribute
+    //järjesti klass, mis omab omadusi mille järgi teste järjestada saab
+    public class OrderAttribute : Attribute
     {
+        public int Value { get; } //väärtus, set puudub et testimise ajal väärtust muuta ei saaks.
+        public OrderAttribute(int value) //konstruktor kus omistatakse väärtus
+        {
+            Value = value;
+        }
     }
 }
